@@ -8,9 +8,11 @@ Table of Contents
     * [Features](#features)
     * [Interfaces](#interfaces)
        * [Block Diagram](#block-diagram)
-	   * [Peripherals and GPIOs](#peripherals-and-gpioss)
+       * [Peripherals and GPIOs](#peripherals-and-gpioss)
   * [Connector description](#connector-description)
-	* [M.2 Interface Top Side](#m.2-interface-top-side)
+    * [M.2 Interface Top Side](#m.2-interface-top-side)
+    * [M.2 Interface Bottom Side](#m.2-interface-bottom-side)
+	* [40 Pin Expansion Connector](#40-pin-expansion-connector)
 
 
 # Functional Description
@@ -40,192 +42,148 @@ IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16
 ### Peripherals and GPIOs
 SDK software makes the pin configuration described in the table. Other configurations are possible just changing processor pin muxing.
 
-+-----------+-----+--------------+
 | Type      | Qty | Input/Output |
-+-----------+-----+--------------+
+|-----------|-----|--------------|
 | GPIO      | 9   | I/O          |
-+-----------+-----+--------------+
 | ADC       | 2   | I            |
-+-----------+-----+--------------+
 | UART      | 2   | I/O          |
-+-----------+-----+--------------+
 | I2C       | 1   | I/O          |
-+-----------+-----+--------------+
 | CAN       | 2   | I/O          |
-+-----------+-----+--------------+
 | USB       | 2   | I/O          |
-+-----------+-----+--------------+
 | LCD       | 1   | I/O          |
-+-----------+-----+--------------+
 | SD        | 1   | I/O          |
-+-----------+-----+--------------+
 | CSI       | 1   | I/O          |
-+-----------+-----+--------------+
 | RMII/MDIO | 1   | I/O          |
-+-----------+-----+--------------+
-
 
 # Connector description
 SDK software makes the pin configuration described in the table. Other configurations are possible just changing processor pin muxing.
 
 ## M.2 Interface Top Side
 
-+------------------------------------------------------------------------------------------------------+
 | Pos | Pin        | Function | Processor PIN | Default MUX | Description                              |
-+------------------------------------------------------------------------------------------------------+
+|------------------------------------------------------------------------------------------------------|
 | 1   | DGND (1)   | POWER    | DGND          |             | System Ground                            |
-+------------------------------------------------------------------------------------------------------+
 | 3   | DGND (1)   | POWER    | DGND          |             | System Ground                            |
-+------------------------------------------------------------------------------------------------------+
 | 5   | DGNG (1)   | POWER    | DGND          |             | System Ground                            |
-+------------------------------------------------------------------------------------------------------+
 | 7   | ADC2       | IO       | GPIO_AD_B1_00 | ADC2_IN5    | Analog to Digital Input 2 / Digital GPIO |
-+------------------------------------------------------------------------------------------------------+
 | 9   | ADC1       | IO       | GPIO_AD_B0_15 | ADC1_IN4    | Analog to Digital Input 1 / Digital GPIO |
-+------------------------------------------------------------------------------------------------------+
 | 11  | POR        | I        | POR           |             | Active Low Reset Input                   |
-+------------------------------------------------------------------------------------------------------+
 | 21  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
-+------------------------------------------------------------------------------------------------------+
 | 23  | USB1_DP    | IO       | USB1.D_P      | USB1.D_P    | Data+ pin USB OTG                        |
-+------------------------------------------------------------------------------------------------------+
-| 25  | USB1_DN    | IO		  | USB1.D_N      | USB1.D_N    | Data- pin USB OTG                        |
-+------------------------------------------------------------------------------------------------------+
+| 25  | USB1_DN    | IO       | USB1.D_N      | USB1.D_N    | Data- pin USB OTG                        |
 | 27  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
-+------------------------------------------------------------------------------------------------------+
 | 29  | USB2_DP    | IO       | USB2.D_P      | USB2.D_P    | Data+ pin USB                            |
-+------------------------------------------------------------------------------------------------------+
 | 31  | USB2_DN    | IO       | USB2.D_N      | USB2.D_N    | Data+ pin USB                            |
-+------------------------------------------------------------------------------------------------------+
 | 33  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
-+------------------------------------------------------------------------------------------------------+
 | 35  | SD1_CLK    | IO       | GPIO_SD_B0_01 | SD1.CLK     | SD Interface Clock                       |
-+------------------------------------------------------------------------------------------------------+
 | 37  | SD1_CD     | I        | GPIO_B1_12    | SD1.CD      | SD Interface Active Low Card Detect      |
-+------------------------------------------------------------------------------------------------------+
 | 39  | SD1_CMD    | IO       | GPIO_SD_B0_00 | SD1.CMD     | SD Interface Command Line                |
-+------------------------------------------------------------------------------------------------------+
 | 41  | SD1_D0     | IO       | GPIO_SD_B0_02 | SD1.D0      | SD Interface Data 0                      |
-+------------------------------------------------------------------------------------------------------+
 | 43  | SD1_D1     | IO       | GPIO_SD_B0_03 | SD1.D1      | SD Interface Data 1                      |
-+------------------------------------------------------------------------------------------------------+
 | 45  | SD1_D2     | IO       | GPIO_SD_B0_04 | SD1.D2      | SD Interface Data 2                      |
-+------------------------------------------------------------------------------------------------------+
 | 47  | SD1_D3     | IO       | GPIO_SD_B0_05 | SD1.D3      | SD Interface Data 3                      |
-+------------------------------------------------------------------------------------------------------+
 | 49  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
-+------------------------------------------------------------------------------------------------------+
 | 51  | CSI_VSYNC  | IO       | GPIO_AD_B1_06 | CSI.VSYNC   | Camera Interface Vertical Sync.          |
-+------------------------------------------------------------------------------------------------------+
 | 53  | CSI_HSYNC  | IO       | GPIO_AD_B1_07 | CSI.HSYNC   | Camera Interface Horizontal Sync.        |
-+------------------------------------------------------------------------------------------------------+
 | 55  | CSI_PIXCLK | IO       | GPIO_AD_B1_04 | CSI.PIXCLK  | Camera Interface Pixel Clock             |
-+------------------------------------------------------------------------------------------------------+
 | 57  | CSI_MCLK   | IO       | GPIO_AD_B1_05 | CSI.MCLK    | Camera Interface Master Clock            |
-+------------------------------------------------------------------------------------------------------+
 | 59  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
-+------------------------------------------------------------------------------------------------------+
 | 61  | CSI_D2     | IO       | GPIO_AD_B1_15 | CSI.D2      | Camera Interface Data 2                  |
-+------------------------------------------------------------------------------------------------------+
 | 63  | CSI_D3     | IO       | GPIO_AD_B1_14 | CSI.D3      | Camera Interface Data 3                  |
-+------------------------------------------------------------------------------------------------------+
 | 65  | CSI_D4     | IO       | GPIO_AD_B1_13 | CSI.D4      | Camera Interface Data 4                  |
-+------------------------------------------------------------------------------------------------------+
 | 67  | CSI_D5     | IO       | GPIO_AD_B1_12 | CSI.D5      | Camera Interface Data 5                  |
-+------------------------------------------------------------------------------------------------------+
 | 69  | CSI_D6     | IO       | GPIO_AD_B1_11 | CSI.D6      | Camera Interface Data 6                  |
-+------------------------------------------------------------------------------------------------------+
 | 71  | CSI_D7     | IO       | GPIO_AD_B1_10 | CSI.D7      | Camera Interface Data 7                  |
-+------------------------------------------------------------------------------------------------------+
 | 73  | CSI_D8     | IO       | GPIO_AD_B1_09 | CSI.D8      | Camera Interface Data 8                  |
-+------------------------------------------------------------------------------------------------------+
 | 75  | CSI_D9     | IO       | GPIO_AD_B1_08 | CSI.D9      | Camera Interface Data 9                  |
-+------------------------------------------------------------------------------------------------------+
 
-(1)	Connect to carrier board GND
+(1) Connect to carrier board GND
 
 ## M.2 Interface Bottom Side
-Pin	Function	Processor PIN	Default MUX	Description
-2	VIN	POWER	+3V3	+3V3 in to power the digital circuits of the module. Up to 500mA
-4	VIN	POWER	+3V3	+3V3 in to power the digital circuits of the module. Up to 500mA
-6	VIN	POWER	+3V3	+3V3 in to power the digital circuits of the module. Up to 500mA
-8	SNVS	POWER	+SNVS	+SNVS to power IMXRT processor.
-10	AVIN	POWER	+3V3A	+3V3A to power processor’s ADC. Should properly filtered. 
-20	WAKEUP	I	WAKEUP	Active High wakeup pin, wakes the module from sleep/standby modes. 
-22	USB1_VBUS	I	USB1.VBUS	VBUS	USB1 VBUS Supply
-24	USB1_OC		USB1.OC	OC	VBUS Over current detection pin.
-26	USB1_ID	I	USB1.ID	ID	Host/Device pin indicator.
-28	USB1_PWR	I	USB1.PWR	PWR	PMIC Control pin for VBUS supply voltage
-30	USB2_VBUS	I	USB2.VBUS	VBUS	USB2 VBUS Supply
-32	GPIO1	IO	GPIO_AD_B0_00	GPIO1_IO00	Digital GPIO
-34	GPIO2	IO	GPIO_AD_B0_02	GPIO1_IO02	Digital GPIO
-36	GPIO3	IO	GPIO_AD_B0_01	PWM2_B03	Digital GPIO and PWM
-38	SWD_IO	IO	GPIO_AD_B0_06	SW.DIO	SWD debug interface Data pin
-40	SWD_CLK	IO	GPIO_AD_B0_07	SW.CLK	SWD debug interface Clock pin
-42	CAN1_TX	IO	GPIO_SD_B1_02	CAN1.TX	CAN Interface Transmit
-44	CAN1_RX	IO	GPIO_SD_B1_03	CAN1.RX	Can Interface Receive
-46	UART1_RX	IO	GPIO_SD_B1_00	UART1.TX	UART Interface Receive
-48	UART1_TX	IO	GPIO_SD_B1_01	UART1.RX	  UART Interface Transmit
-50	I2C_SDA	IO	GPIO_SD_B1_05	I2C1_SDA	I2C Interface Data
-52	I2C_SCL	IO	GPIO_SD_B1_04	I2C1_SCL	I2C Interface Clock
-54	MDIO_MDC	IO	GPIO_EMC_40	MDIO.MDC	SMI Data IO
-56	MDIO_MDIO	IO	GPIO_EMC_41	MDIO.MDIO	SMI Clock
-58	RMII_RX_D0	IO	GPIO_B1_04	RMII.RX_D0	RMII Interface Receive Data 0
-60	RMII_RX_D1	IO	GPIO_B1_05	RMII.RX_D1	RMII Interface Receive Data 1
-62	RMII_RX_EN	IO	GPIO_B1_06	RMII.RX_EN	RMII Interface Receive Enable
-64	RMII_RX_ER	IO	GPIO_B1_11	RMII.RX_ER	RMII Interface Receive Error
-66	DGND	POWER	DGND 		System Ground
-68	RMII_TX_CLK	IO	GPIO_B1_10	RMII.TX_CLK	RMII Interface Transmit Clock
-70	RMII_TX_D0	IO	GPIO_B1_07	RMII.TX_D0	RMII Interface Transmit Data 0
-72	RMII_TX_D1	IO	GPIO_B1_08	RMII.TX_D1	RMII Interface Transmit Data 1
-74	RMII_TX_EN	IO	GPIO_B1_09	RMII.TX_EN	RMII Interface Transmit Enable
+
+| Pos | Pin         | Function | Processor PIN | Default MUX | Description                                                        |
+|-----|-------------|----------|--------------------------------------------------------------------------------------------------|
+| 2   | VIN         | POWER    | +3V3          |             | +3V3 in to power the digital circuits of the module. Up to 500mA   |
+| 4   | VIN         | POWER    | +3V3          |             | +3V3 in to power the digital circuits of the module. Up to 500mA   |
+| 6   | VIN         | POWER    | +3V3          |             | +3V3 in to power the digital circuits of the module. Up to 500mA   |
+| 8   | SNVS        | POWER    | +SNVS         |             | +SNVS to power IMXRT processor                                     |
+| 10  | AVIN        | POWER    | +3V3A         |             | +3V3A to power processor’s ADC. Should properly filtered           |
+| 20  | WAKEUP      | I        | WAKEUP        |             | Active High wakeup pin, wakes the module from sleep/standby modes  |
+| 22  | USB1_VBUS   | I        | USB1.VBUS     | VBUS        | USB1 VBUS Supply                                                   |
+| 24  | USB1_OC     | I        | USB1.OC       | OC          | VBUS Over current detection pin                                    |
+| 26  | USB1_ID     | I        | USB1.ID       | ID          | Host/Device pin indicator                                          |
+| 28  | USB1_PWR    | I        | USB1.PWR      | PWR         | PMIC Control pin for VBUS supply voltage                           |
+| 30  | USB2_VBUS   | I        | USB2.VBUS     | VBUS        | USB2 VBUS Supply                                                   |
+| 32  | GPIO1       | IO       | GPIO_AD_B0_00 | GPIO1_IO00  | Digital GPIO                                                       |
+| 34  | GPIO2       | IO       | GPIO_AD_B0_02 | GPIO1_IO02  | Digital GPIO                                                       |
+| 36  | GPIO3       | IO       | GPIO_AD_B0_01 | PWM2_B03    | Digital GPIO and PWM                                               |
+| 38  | SWD_IO      | IO       | GPIO_AD_B0_06 | SW.DIO      | SWD debug interface Data pin                                       |
+| 40  | SWD_CLK     | IO       | GPIO_AD_B0_07 | SW.CLK      | SWD debug interface Clock pin                                      |
+| 42  | CAN1_TX     | IO       | GPIO_SD_B1_02 | CAN1.TX     | CAN Interface Transmit                                             |
+| 44  | CAN1_RX     | IO       | GPIO_SD_B1_03 | CAN1.RX     | Can Interface Receive                                              |
+| 46  | UART1_RX    | IO       | GPIO_SD_B1_00 | UART1.TX    | UART Interface Receive                                             |
+| 48  | UART1_TX    | IO       | GPIO_SD_B1_01 | UART1.RX    | UART Interface Transmit                                            |
+| 50  | I2C_SDA     | IO       | GPIO_SD_B1_05 | I2C1_SDA    | I2C Interface Data                                                 |
+| 52  | I2C_SCL     | IO       | GPIO_SD_B1_04 | I2C1_SCL    | I2C Interface Clock                                                |
+| 54  | MDIO_MDC    | IO       | GPIO_EMC_40   | MDIO.MDC    | SMI Data IO                                                        |
+| 56  | MDIO_MDIO   | IO       | GPIO_EMC_41   | MDIO.MDIO   | SMI Clock                                                          |
+| 58  | RMII_RX_D0  | IO       | GPIO_B1_04    | RMII.RX_D0  | RMII Interface Receive Data 0                                      |
+| 60  | RMII_RX_D1  | IO       | GPIO_B1_05    | RMII.RX_D1  | RMII Interface Receive Data 1                                      |
+| 62  | RMII_RX_EN  | IO       | GPIO_B1_06    | RMII.RX_EN  | RMII Interface Receive Enable                                      |
+| 64  | RMII_RX_ER  | IO       | GPIO_B1_11    | RMII.RX_ER  | RMII Interface Receive Error                                       |
+| 66  | DGND        | POWER    | DGND          |             | System Ground                                                      |
+| 68  | RMII_TX_CLK | IO       | GPIO_B1_10    | RMII.TX_CLK | RMII Interface Transmit Clock                                      |
+| 70  | RMII_TX_D0  | IO       | GPIO_B1_07    | RMII.TX_D0  | RMII Interface Transmit Data 0                                     |
+| 72  | RMII_TX_D1  | IO       | GPIO_B1_08    | RMII.TX_D1  | RMII Interface Transmit Data 1                                     |
+| 74  | RMII_TX_EN  | IO       | GPIO_B1_09    | RMII.TX_EN  | RMII Interface Transmit Enable                                     |
 
 ## 40 Pin Expansion Connector
-Pin	Function	Processor PIN	Default MUX	Description
-1	DGND	POWER	DGND	System Ground
-2	BOOT	I	BOOT		Boot Mode pin Selector
-3	LCD_CLK	IO	GPIO_B0_00	LCDIF.CLK	LCD Interface Clock
-4	LCD_D0	IO	GPIO_B0_04	LCDIF.D0	LCD Interface Data 0
-5	LCD_D1	IO	GPIO_B0_05	LCDIF.D1	LCD Interface Data 1
-6	LCD_D2	IO	GPIO_B0_06	LCDIF.D2	LCD Interface Data 2
-7	LCD_D3	IO	GPIO_B0_07	LCDIF.D3	LCD Interface Data 3
-8	LCD_D4	IO	GPIO_B0_08	LCDIF.D4	LCD Interface Data 4
-9	LCD_D5	IO	GPIO_B0_09	LCDIF.D5	LCD Interface Data 5
-10	LCD_D6	IO	GPIO_B0_10	LCDIF.D6	LCD Interface Data 6
-11	LCD_D7	IO	GPIO_B0_11	LCDIF.D7	LCD Interface Data 7
-12	LCD_D8	IO	GPIO_B0_12	LCDIF.D8	LCD Interface Data 8
-13	LCD_D9	IO	GPIO_B0_13	LCDIF.D9	LCD Interface Data 9
-14	LCD_D10	IO	GPIO_B0_14	LCDIF.D10	LCD Interface Data 10
-15	LCD_D11	IO	GPIO_B0_15	LCDIF.D11	LCD Interface Data 11
-16	LCD_D12	IO	GPIO_B1_00	LCDIF.D12	LCD Interface Data 12
-17	LCD_D13	IO	GPIO_B1_01	LCDIF.D13	LCD Interface Data 13
-18	LCD_D14	IO	GPIO_B1_02	LCDIF.D14	LCD Interface Data 14
-19	LCD_D15	IO	GPIO_B1_03	LCDIF.D15	LCD Interface Data 15
-20	LCD_VSYNC	IO	GPIO_B0_03	LCDIF.VSYNC	LCD Interface Vertical Sync.
-21	LCD_HSYNC	IO	GPIO_B0_02	LCDIF.HSYNC	LCD Interface Horizontal Sync.
-22	LCD_EN	I	GPIO_B0_01	CDIF.EN	LCD Interface Enable
-23	DGND	POWER	DGND 		System Ground
-24	DGND	POWER	DGND		System Ground
-25	UART2_TX	IO	GPIO_SD_B1_00	UART4.TX	UART Interface Transmit
-26	CAN2_TX	IO	GPIO_AD_B0_14	CAN2.TX	CAN Interface Transmit
-27	UART2_RX	IO	GPIO_SD_B1_01	UART4.RX	UART Interface Receive
-28	CAN2_RX	IO	GPIO_AD_B0_03	CAN2.RX	CAN Interface Receive
-29	GPIO4	IO	GPIO_EMC_39	GPIO3_IO25	Digital GPIO
-30	GPIO5	IO	GPIO_AD_B0_09	PWM2_A03	Digital GPIO and PWM
-31	GPIO6	IO	GPIO_B1_15	GPIO2_IO31	Digital GPIO
-32	GPIO7	IO	GPIO_AD_B0_08	GPIO1_IO08	Digital GPIO
-33	GPIO8	IO	GPIO_B1_13	GPIO2_IO29	Digital GPIO
-34	GPIO9	IO	PMIC_STBY_REQ	GPIO5_02	Digital GPIO
-35	RESERVED	-			-
-36	RESERVED	-			-
-37	RESERVED	-			-
-38	RESERVED	-			-
-39	RESERVED	-			-
-40	RESERVED	-			-
+| Pos | Pin       | Function | Processor PIN | Default MUX | Description |
+|-----|-----------|----------|--------------------------------------------------------------------------------------------------|
+| 1   | DGND      | POWER    | DGND          |             | System Ground                  |
+| 2   | BOOT      | I        | BOOT          |             | Boot Mode pin Selector         |
+| 3   | LCD_CLK   | IO       | GPIO_B0_00    | LCDIF.CLK   | LCD Interface Clock            |
+| 4   | LCD_D0    | IO       | GPIO_B0_04    | LCDIF.D0    | LCD Interface Data 0           |
+| 5   | LCD_D1    | IO       | GPIO_B0_05    | LCDIF.D1    | LCD Interface Data 1           |
+| 6   | LCD_D2    | IO       | GPIO_B0_06    | LCDIF.D2    | LCD Interface Data 2           |
+| 7   | LCD_D3    | IO       | GPIO_B0_07    | LCDIF.D3    | LCD Interface Data 3           |
+| 8   | LCD_D4    | IO       | GPIO_B0_08    | LCDIF.D4    | LCD Interface Data 4           |
+| 9   | LCD_D5    | IO       | GPIO_B0_09    | LCDIF.D5    | LCD Interface Data 5           |
+| 10  | LCD_D6    | IO       | GPIO_B0_10    | LCDIF.D6    | LCD Interface Data 6           |
+| 11  | LCD_D7    | IO       | GPIO_B0_11    | LCDIF.D7    | LCD Interface Data 7           |
+| 12  | LCD_D8    | IO       | GPIO_B0_12    | LCDIF.D8    | LCD Interface Data 8           |
+| 13  | LCD_D9    | IO       | GPIO_B0_13    | LCDIF.D9    | LCD Interface Data 9           |
+| 14  | LCD_D10   | IO       | GPIO_B0_14    | LCDIF.D10   | LCD Interface Data 10          |
+| 15  | LCD_D11   | IO       | GPIO_B0_15    | LCDIF.D11   | LCD Interface Data 11          |
+| 16  | LCD_D12   | IO       | GPIO_B1_00    | LCDIF.D12   | LCD Interface Data 12          |
+| 17  | LCD_D13   | IO       | GPIO_B1_01    | LCDIF.D13   | LCD Interface Data 13          |
+| 18  | LCD_D14   | IO       | GPIO_B1_02    | LCDIF.D14   | LCD Interface Data 14          |
+| 19  | LCD_D15   | IO       | GPIO_B1_03    | LCDIF.D15   | LCD Interface Data 15          |
+| 20  | LCD_VSYNC | IO       | GPIO_B0_03    | LCDIF.VSYNC | LCD Interface Vertical Sync    |
+| 21  | LCD_HSYNC | IO       | GPIO_B0_02    | LCDIF.HSYNC | LCD Interface Horizontal Sync  |
+| 22  | LCD_EN    | I        | GPIO_B0_01    | CDIF.EN     | LCD Interface Enable           |
+| 23  | DGND      | POWER    | DGND          |             | System Ground                  |
+| 24  | DGND      | POWER    | DGND          |             | System Ground                  |
+| 25  | UART2_TX  | IO       | GPIO_SD_B1_00 | UART4.TX    | UART Interface Transmit        |
+| 26  | CAN2_TX   | IO       | GPIO_AD_B0_14 | CAN2.TX     | CAN Interface Transmit         |
+| 27  | UART2_RX  | IO       | GPIO_SD_B1_01 | UART4.RX    | UART Interface Receive         |
+| 28  | CAN2_RX   | IO       | GPIO_AD_B0_03 | CAN2.RX     | CAN Interface Receive          |
+| 29  | GPIO4     | IO       | GPIO_EMC_39   | GPIO3_IO25  | Digital GPIO                   |
+| 30  | GPIO5     | IO       | GPIO_AD_B0_09 |  PWM2_A03   | Digital GPIO and PWM           |
+| 31  | GPIO6     | IO       | GPIO_B1_15    | GPIO2_IO31  | Digital GPIO                   |
+| 32  | GPIO7     | IO       | GPIO_AD_B0_08 |  GPIO1_IO08 | Digital GPIO                   |
+| 33  | GPIO8     | IO       | GPIO_B1_13    |  GPIO2_IO29 | Digital GPIO                   |
+| 34  | GPIO9     | IO       | PMIC_STBY_REQ |  GPIO5_02   | Digital GPIO                   |
+| 35  | RESERVED  |          |               |             |                                |
+| 36  | RESERVED  |          |               |             |                                |
+| 37  | RESERVED  |          |               |             |                                |
+| 38  | RESERVED  |          |               |             |                                |
+| 39  | RESERVED  |          |               |             |                                |
+| 40  | RESERVED  |          |               |             |                                |
 
 # Electrical Specifications
-Input VCC	Typical current	Max current
-3V3	230mA	2000mA
+Input VCC   Typical current Max current
+3V3 230mA   2000mA
 
 
 # Mechanical Specifications
