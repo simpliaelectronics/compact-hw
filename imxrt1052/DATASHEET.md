@@ -61,7 +61,7 @@ SDK software makes the pin configuration described in the table. Other configura
 ## M.2 Interface Top Side
 
 | Pos | Pin        | Function | Processor PIN | Default MUX | Description                              |
-|------------------------------------------------------------------------------------------------------|
+|-----|------------|----------|---------------|-------------|------------------------------------------|
 | 1   | DGND (1)   | POWER    | DGND          |             | System Ground                            |
 | 3   | DGND (1)   | POWER    | DGND          |             | System Ground                            |
 | 5   | DGNG (1)   | POWER    | DGND          |             | System Ground                            |
@@ -102,7 +102,7 @@ SDK software makes the pin configuration described in the table. Other configura
 ## M.2 Interface Bottom Side
 
 | Pos | Pin         | Function | Processor PIN | Default MUX | Description                                                        |
-|-----|-------------|----------|--------------------------------------------------------------------------------------------------|
+|-----|-------------|----------|---------------|-------------|--------------------------------------------------------------------|
 | 2   | VIN         | POWER    | +3V3          |             | +3V3 in to power the digital circuits of the module. Up to 500mA   |
 | 4   | VIN         | POWER    | +3V3          |             | +3V3 in to power the digital circuits of the module. Up to 500mA   |
 | 6   | VIN         | POWER    | +3V3          |             | +3V3 in to power the digital circuits of the module. Up to 500mA   |
@@ -138,8 +138,8 @@ SDK software makes the pin configuration described in the table. Other configura
 | 74  | RMII_TX_EN  | IO       | GPIO_B1_09    | RMII.TX_EN  | RMII Interface Transmit Enable                                     |
 
 ## 40 Pin Expansion Connector
-| Pos | Pin       | Function | Processor PIN | Default MUX | Description |
-|-----|-----------|----------|--------------------------------------------------------------------------------------------------|
+| Pos | Pin       | Function | Processor PIN | Default MUX | Description                    |
+|-----|-----------|----------|---------------|-------------|--------------------------------|
 | 1   | DGND      | POWER    | DGND          |             | System Ground                  |
 | 2   | BOOT      | I        | BOOT          |             | Boot Mode pin Selector         |
 | 3   | LCD_CLK   | IO       | GPIO_B0_00    | LCDIF.CLK   | LCD Interface Clock            |
