@@ -1,4 +1,4 @@
-# compact-hw
+# Compact IMXRT 1052 Datasheet
 
 Table of Contents
 =================
@@ -13,7 +13,14 @@ Table of Contents
     * [M.2 Interface Top Side](#m.2-interface-top-side)
     * [M.2 Interface Bottom Side](#m.2-interface-bottom-side)
 	* [40 Pin Expansion Connector](#40-pin-expansion-connector)
+  * [Electrical Specifications](#electrical-specifications)
+	* [Power consumption](#power-consumption)
+	* [Footprint](#footprint)
+  * [Mechanical Specifications](#mechanical-specifications)
+	* [Dimensions and Weight](#dimensions-and-weight)
+	* [Tested Connectors](#tested-connectors)
 
+# Ordering
 
 # Functional Description
 
@@ -182,32 +189,36 @@ SDK software makes the pin configuration described in the table. Other configura
 | 40  | RESERVED  |          |               |             |                                |
 
 # Electrical Specifications
-Input VCC   Typical current Max current
-3V3 230mA   2000mA
+## Power consumption
 
+|Input VCC | Typical current | Max current |
+|----------|-----------------|-------------|
+|3V3       | 230mA           | 2000mA      |
+
+## Footprint
+TBD
 
 # Mechanical Specifications
 ## Dimensions and Weight
 
 The Module complies with the mechanical 2230 M.2 specifications.
 
+![Module dimmensions](/imxrt1052/images/mod_size.jpg)
 
- 
+| Dimmension | Value  |
+|------------|--------|
+| Width      | 22 mm  |
+| Height     | 30 mm  |
+| Thickness  | 3.5 mm |
+| Weight     | TBD    |
 
-Width = 22 mm
-Height = 30mm
-Thickness = 3.5 mm
-Weight = TBD
+3D files available in the repository.
 
-3D files available in the documentation.
-
-## Certified Connectors
-
-## Footprint
-
+## Tested Connectors
+TBD
 
 # Ordering
-
+TBD
 
 
 
