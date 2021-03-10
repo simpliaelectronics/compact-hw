@@ -7,8 +7,11 @@ Table of Contents
     * [Overview](#overview)
     * [Features](#features)
     * [Interfaces](#interfaces)
-       * [Block Diagram](#block-diagram) 
- 
+       * [Block Diagram](#block-diagram)
+	   * [Peripherals and GPIOs](#peripherals-and-gpioss)
+  * [Connector description](#connector-description)
+	* [M.2 Interface Top Side](#m.2-interface-top-side)
+
 
 # Functional Description
 
@@ -20,72 +23,124 @@ IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16
 
 ## Features
 
-•	IMXRT 1052 processor, based on Arm Cortex-M7 MPCore Platform.
-•	Different options for RAM/FLASH
-•	EdgeLock SE050 secure element for secure communicatios.
-•	M.2 Interface, 2230 Form Factor with expansion connector
-•	Standard interfaces sucha as GPIO, Ethernet (RMII/MDIO), I2C, SPI, UART
-•	Camera input via MIPI
-•	Display output vis parallel LCD
+* [IMXRT 1052 processor](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/i-mx-rt-crossover-mcus/i-mx-rt1050-crossover-mcu-with-arm-cortex-m7-core:i.MX-RT1050), based on Arm Cortex-M7 MPCore Platform.
+* Different options for RAM/FLASH
+* [EdgeLock SE050](https://www.nxp.com/products/security-and-authentication/authentication/edgelock-se050-plug-trust-secure-element-family-enhanced-iot-security-with-maximum-flexibility:SE050) secure element for secure communicatios.
+* M.2 Interface, 2230 Form Factor with expansion connector
+* Standard interfaces sucha as GPIO, Ethernet (RMII/MDIO), I2C, SPI, UART
+* Camera input via MIPI
+* Display output vis parallel LCD
 
 ## Interfaces
+
 ### Block Diagram
 
+![Connect imxrt1052 block diagram](/imxrt1052/images/block_diagram.jpg)
 
 ### Peripherals and GPIOs
 SDK software makes the pin configuration described in the table. Other configurations are possible just changing processor pin muxing.
 
-Type	Qty	Input/Output
-GPIO	9	I/O
-ADC	2	I
-UART	2	I/O
-I2C	1	I/O
-CAN	2	I/O
-USB	2	I/O
-LCD	1	I/O
-SD	1	I/O
-CSI	1	I/O
-RMII/MDIO	1	I/O
++-----------+-----+--------------+
+| Type      | Qty | Input/Output |
++-----------+-----+--------------+
+| GPIO      | 9   | I/O          |
++-----------+-----+--------------+
+| ADC       | 2   | I            |
++-----------+-----+--------------+
+| UART      | 2   | I/O          |
++-----------+-----+--------------+
+| I2C       | 1   | I/O          |
++-----------+-----+--------------+
+| CAN       | 2   | I/O          |
++-----------+-----+--------------+
+| USB       | 2   | I/O          |
++-----------+-----+--------------+
+| LCD       | 1   | I/O          |
++-----------+-----+--------------+
+| SD        | 1   | I/O          |
++-----------+-----+--------------+
+| CSI       | 1   | I/O          |
++-----------+-----+--------------+
+| RMII/MDIO | 1   | I/O          |
++-----------+-----+--------------+
+
 
 # Connector description
 SDK software makes the pin configuration described in the table. Other configurations are possible just changing processor pin muxing.
+
 ## M.2 Interface Top Side
 
-Pin	Function	Processor PIN	Default MUX	Description
-1	DGND (1)	POWER	DGND		System Ground
-3	DGND (1)	POWER	DGND		System Ground
-5	DGNG (1)	POWER	DGND		System Ground
-7	ADC2	IO	GPIO_AD_B1_00	ADC2_IN5	Analog to Digital Input 2 / Digital GPIO
-9	ADC1	IO	GPIO_AD_B0_15	ADC1_IN4	Analog to Digital Input 1 / Digital GPIO
-11	POR	I	POR		Active Low Reset Input
-21	DGND (1)	POWER	DGND		System Ground
-23	USB1_DP	IO	USB1.D_P	USB1.D_P	Data+ pin USB OTG
-25	USB1_DN	IO	USB1.D_N	USB1.D_N	Data- pin USB OTG
-27	DGND (1)	POWER	DGND 	System Ground
-29	USB2_DP	IO	USB2.D_P	USB2.D_P	Data+ pin USB
-31	USB2_DN	IO	USB2.D_N	USB2.D_N	Data+ pin USB
-33	DGND (1)	POWER	DGND	System Ground
-35	SD1_CLK	IO	GPIO_SD_B0_01	SD1.CLK	SD Interface Clock
-37	SD1_CD	I	GPIO_B1_12	SD1.CD	SD Interface Active Low Card Detect
-39	SD1_CMD	IO	GPIO_SD_B0_00	SD1.CMD	SD Interface Command Line
-41	SD1_D0	IO	GPIO_SD_B0_02	SD1.D0	SD Interface Data 0
-43	SD1_D1	IO	GPIO_SD_B0_03	SD1.D1	SD Interface Data 1
-45	SD1_D2	IO	GPIO_SD_B0_04	SD1.D2	SD Interface Data 2
-47	SD1_D3	IO	GPIO_SD_B0_05	SD1.D3	SD Interface Data 3
-49	DGND (1)	POWER	DGND	System Ground
-51	CSI_VSYNC	IO	GPIO_AD_B1_06	CSI.VSYNC	Camera Interface Vertical Sync.
-53	CSI_HSYNC	IO	GPIO_AD_B1_07	CSI.HSYNC	Camera Interface Horizontal Sync.
-55	CSI_PIXCLK	IO	GPIO_AD_B1_04	CSI.PIXCLK	Camera Interface Pixel Clock
-57	CSI_MCLK	IO	GPIO_AD_B1_05	CSI.MCLK	Camera Interface Master Clock
-59	DGND (1)	POWER	DGND	System Ground
-61	CSI_D2	IO	GPIO_AD_B1_15	CSI.D2	Camera Interface Data 2
-63	CSI_D3	IO	GPIO_AD_B1_14	CSI.D3	Camera Interface Data 3
-65	CSI_D4	IO	GPIO_AD_B1_13	CSI.D4	Camera Interface Data 4
-67	CSI_D5	IO	GPIO_AD_B1_12	CSI.D5	Camera Interface Data 5
-69	CSI_D6	IO	GPIO_AD_B1_11	CSI.D6	Camera Interface Data 6
-71	CSI_D7	IO	GPIO_AD_B1_10	CSI.D7	Camera Interface Data 7
-73	CSI_D8	IO	GPIO_AD_B1_09	CSI.D8	Camera Interface Data 8
-75	CSI_D9	IO	GPIO_AD_B1_08	CSI.D9	Camera Interface Data 9
++------------------------------------------------------------------------------------------------------+
+| Pos | Pin        | Function | Processor PIN | Default MUX | Description                              |
++------------------------------------------------------------------------------------------------------+
+| 1   | DGND (1)   | POWER    | DGND          |             | System Ground                            |
++------------------------------------------------------------------------------------------------------+
+| 3   | DGND (1)   | POWER    | DGND          |             | System Ground                            |
++------------------------------------------------------------------------------------------------------+
+| 5   | DGNG (1)   | POWER    | DGND          |             | System Ground                            |
++------------------------------------------------------------------------------------------------------+
+| 7   | ADC2       | IO       | GPIO_AD_B1_00 | ADC2_IN5    | Analog to Digital Input 2 / Digital GPIO |
++------------------------------------------------------------------------------------------------------+
+| 9   | ADC1       | IO       | GPIO_AD_B0_15 | ADC1_IN4    | Analog to Digital Input 1 / Digital GPIO |
++------------------------------------------------------------------------------------------------------+
+| 11  | POR        | I        | POR           |             | Active Low Reset Input                   |
++------------------------------------------------------------------------------------------------------+
+| 21  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
++------------------------------------------------------------------------------------------------------+
+| 23  | USB1_DP    | IO       | USB1.D_P      | USB1.D_P    | Data+ pin USB OTG                        |
++------------------------------------------------------------------------------------------------------+
+| 25  | USB1_DN    | IO		  | USB1.D_N      | USB1.D_N    | Data- pin USB OTG                        |
++------------------------------------------------------------------------------------------------------+
+| 27  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
++------------------------------------------------------------------------------------------------------+
+| 29  | USB2_DP    | IO       | USB2.D_P      | USB2.D_P    | Data+ pin USB                            |
++------------------------------------------------------------------------------------------------------+
+| 31  | USB2_DN    | IO       | USB2.D_N      | USB2.D_N    | Data+ pin USB                            |
++------------------------------------------------------------------------------------------------------+
+| 33  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
++------------------------------------------------------------------------------------------------------+
+| 35  | SD1_CLK    | IO       | GPIO_SD_B0_01 | SD1.CLK     | SD Interface Clock                       |
++------------------------------------------------------------------------------------------------------+
+| 37  | SD1_CD     | I        | GPIO_B1_12    | SD1.CD      | SD Interface Active Low Card Detect      |
++------------------------------------------------------------------------------------------------------+
+| 39  | SD1_CMD    | IO       | GPIO_SD_B0_00 | SD1.CMD     | SD Interface Command Line                |
++------------------------------------------------------------------------------------------------------+
+| 41  | SD1_D0     | IO       | GPIO_SD_B0_02 | SD1.D0      | SD Interface Data 0                      |
++------------------------------------------------------------------------------------------------------+
+| 43  | SD1_D1     | IO       | GPIO_SD_B0_03 | SD1.D1      | SD Interface Data 1                      |
++------------------------------------------------------------------------------------------------------+
+| 45  | SD1_D2     | IO       | GPIO_SD_B0_04 | SD1.D2      | SD Interface Data 2                      |
++------------------------------------------------------------------------------------------------------+
+| 47  | SD1_D3     | IO       | GPIO_SD_B0_05 | SD1.D3      | SD Interface Data 3                      |
++------------------------------------------------------------------------------------------------------+
+| 49  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
++------------------------------------------------------------------------------------------------------+
+| 51  | CSI_VSYNC  | IO       | GPIO_AD_B1_06 | CSI.VSYNC   | Camera Interface Vertical Sync.          |
++------------------------------------------------------------------------------------------------------+
+| 53  | CSI_HSYNC  | IO       | GPIO_AD_B1_07 | CSI.HSYNC   | Camera Interface Horizontal Sync.        |
++------------------------------------------------------------------------------------------------------+
+| 55  | CSI_PIXCLK | IO       | GPIO_AD_B1_04 | CSI.PIXCLK  | Camera Interface Pixel Clock             |
++------------------------------------------------------------------------------------------------------+
+| 57  | CSI_MCLK   | IO       | GPIO_AD_B1_05 | CSI.MCLK    | Camera Interface Master Clock            |
++------------------------------------------------------------------------------------------------------+
+| 59  | DGND (1)   | POWER    | DGND          |             | System Ground                            |
++------------------------------------------------------------------------------------------------------+
+| 61  | CSI_D2     | IO       | GPIO_AD_B1_15 | CSI.D2      | Camera Interface Data 2                  |
++------------------------------------------------------------------------------------------------------+
+| 63  | CSI_D3     | IO       | GPIO_AD_B1_14 | CSI.D3      | Camera Interface Data 3                  |
++------------------------------------------------------------------------------------------------------+
+| 65  | CSI_D4     | IO       | GPIO_AD_B1_13 | CSI.D4      | Camera Interface Data 4                  |
++------------------------------------------------------------------------------------------------------+
+| 67  | CSI_D5     | IO       | GPIO_AD_B1_12 | CSI.D5      | Camera Interface Data 5                  |
++------------------------------------------------------------------------------------------------------+
+| 69  | CSI_D6     | IO       | GPIO_AD_B1_11 | CSI.D6      | Camera Interface Data 6                  |
++------------------------------------------------------------------------------------------------------+
+| 71  | CSI_D7     | IO       | GPIO_AD_B1_10 | CSI.D7      | Camera Interface Data 7                  |
++------------------------------------------------------------------------------------------------------+
+| 73  | CSI_D8     | IO       | GPIO_AD_B1_09 | CSI.D8      | Camera Interface Data 8                  |
++------------------------------------------------------------------------------------------------------+
+| 75  | CSI_D9     | IO       | GPIO_AD_B1_08 | CSI.D9      | Camera Interface Data 9                  |
++------------------------------------------------------------------------------------------------------+
 
 (1)	Connect to carrier board GND
 
