@@ -248,11 +248,26 @@ SDK software makes the pin configuration described in the table. Other configura
 # Electrical Specifications
 ## Operating conditions
 
-|Parameter            |Min value | Typical value | Max value | Unit |
-|---------------------|----------|---------------|-----------|------|
-| Input VCC           | 3V3      | 3V3           | 3V3       | V    |
-| Current consumption |          | 230           | 2000      | mA   |
-| Temperature         | -40      |               | 85        | ºC   |
+|Parameter                      |Min value | Typical value | Max value | Unit |
+|-------------------------------|----------|---------------|-----------|------|
+| Input digital +3V3            | 3        | 3.3           | 3.6       | V    |
+| Input analog +3V3A            | 3        | 3.3           | 3.6       | V    |
+| SNVSS +3V3_SNVS               | 2.4      | 3.3           | 3.6       | V    |
+| VCC SDIO (1)                  | 1.85     | 3.15          | 3.15      | V    |
+| USB VBUS (2)                  | 4.4      | 5             | 5.5       | V    |
+| Current consumption (3)       | TBD      | 230           | 2000      | mA   |
+| Analog current consumption (4)| -        | -             | 40        | mA   |
+| SNVSS current consumption     | -        | -             | 0.25      | mA   |
+| SDIO current consumption (5)  | -        | 200           | -         | mA   |
+| USB VBUS current consumption  | -        | 50            | -         | mA   |
+| Temperature (6)               | -40      |               | 85        | ºC   |
+
+* (1) This voltage is used for I/O communication with SD card. Two voltages, 3V3 and 1V8, can be selected to enable different speed modes. methods. Consult Reference design documentation for usage example.
+* (2) VBUS voltage from USB connector.
+* (3) Minimum values depend on power down mode selected and external elements connected to I/O. Value shown for reference purposes only.
+* (4) 3.3 V power supply for 12-bit ADC, 600uA typical, 750 uA max, for each ADC. 100 Ohm max loading for touch panel, cause 33 mA current.
+* (5) Current supplied by VCC SDIO for I/O, do not connect directly to SD card.
+* (6) All parts are rated for industrial temperature range
 
 ## Footprint
 TBD
