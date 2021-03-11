@@ -5,20 +5,26 @@ Table of Contents
 
   * [Functional Description](#functional-description)
     * [Overview](#overview)
-    * [Features](#features)
+	* [Processor features](#processor-features)
+    * [Module features](#module-features)
     * [Interfaces](#interfaces)
        * [Block Diagram](#block-diagram)
        * [Peripherals and GPIOs](#peripherals-and-gpioss)
+	* [Security](#security)
+		* [Processor security](#processor-security)
+		* [Secure element](#secure-element)
   * [Connector description](#connector-description)
     * [M.2 Interface Top Side](#m.2-interface-top-side)
     * [M.2 Interface Bottom Side](#m.2-interface-bottom-side)
 	* [40 Pin Expansion Connector](#40-pin-expansion-connector)
   * [Electrical Specifications](#electrical-specifications)
-	* [Power consumption](#power-consumption)
+	* [Operating conditions](#operating-conditions)
 	* [Footprint](#footprint)
   * [Mechanical Specifications](#mechanical-specifications)
 	* [Dimensions and Weight](#dimensions-and-weight)
 	* [Tested Connectors](#tested-connectors)
+		* [Key B M.2 conector](#key-b-m.2-conector)
+		* [Expansion connector](#expansion-connector)
 
 # Ordering
 
@@ -30,11 +36,30 @@ IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16
 
 ![Connect imxrt1052](/imxrt1052/images/connect_imxrt1052.jpg)
 
-## Features
+## Processor features
 
 * [IMXRT 1052 processor](https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/i-mx-rt-crossover-mcus/i-mx-rt1050-crossover-mcu-with-arm-cortex-m7-core:i.MX-RT1050), based on Arm Cortex-M7 MPCore Platform.
+* 3020 CoreMark/1284 DMIPS @ 600 MHz
+* Up to 512 kB Tightly Coupled Memory (TCM)
+* FreeRTOS and Azure OS support available with MCUXpresso SDK
+* Real-time, low-latency response as low as 20 ns
+* Industry’s lowest dynamic power with an integrated DC-DC converter
+* Low-power run modes at 24 MHz
+* Advanced multimedia for GUI and enhanced HMI
+	* 2D graphics acceleration engine
+	* Parallel camera sensor interface
+	* LCD display controller (up to WXGA 1366x768)
+	* 3x I2S for high-performance, multichannel audio
+* Extensive external memory interface options 
+	* NAND, eMMC, QuadSPI NOR Flash, and Parallel NOR Flash (not all available on the module)
+
+![imxrt1052 block diagram](/imxrt1052/images/iMX-RT1050-BD.jpg)
+
+## Module features
+
+* [IMXRT 1052 processor](#processor-features), based on Arm Cortex-M7 MPCore Platform.
 * Different options for RAM/FLASH
-* [EdgeLock SE050](https://www.nxp.com/products/security-and-authentication/authentication/edgelock-se050-plug-trust-secure-element-family-enhanced-iot-security-with-maximum-flexibility:SE050) secure element for secure communicatios.
+* [EdgeLock SE050](#secure-element) secure element for secure communicatios.
 * M.2 Interface, 2230 Form Factor with expansion connector
 * Standard interfaces sucha as GPIO, Ethernet (RMII/MDIO), I2C, SPI, UART
 * Camera input via MIPI
@@ -61,6 +86,38 @@ SDK software makes the pin configuration described in the table. Other configura
 | SD        | 1   | I/O          |
 | CSI       | 1   | I/O          |
 | RMII/MDIO | 1   | I/O          |
+
+
+## Security
+
+### Processor security
+Security functions are enabled and accelerated by the following hardware:
+* High Assurance Boot (HAB)
+* Data Co-Processor (DCP):
+	* AES-128, ECB, and CBC mode
+	* SHA-1 and SHA-256
+	* CRC-32
+* Bus Encryption Engine (BEE)
+	* AES-128, ECB, and CTR mode
+	* On-the-fly QSPI Flash decryption
+* True random number generation (TRNG)
+* Secure Non-Volatile Storage (SNVS)
+	* Secure real-time clock (RTC)
+	* Zero Master Key (ZMK)
+* Secure JTAG Controller (SJC)
+
+### Secure element
+The [EdgeLock SE050](https://www.nxp.com/products/security-and-authentication/authentication/edgelock-se050-plug-trust-secure-element-family-enhanced-iot-security-with-maximum-flexibility:SE050) product family of Plug & Trust devices offers enhanced Common Criteria EAL 6+ based security, for unprecedented protection against the latest attack scenarios. This ready-to-use secure element for IoT devices provides a root of trust at the IC level and delivers real end-to-end security – from edge to cloud – without the need to write security code.
+
+* Common Criteria EAL 6+ certified up to OS level as a safe environment to run pre-installed NXP IoT applets, supporting full encrypted communications and secured lifecycle management
+* RSA & ECC functionalities, high key length and future proof curves, for example, brainpool, Edwards, and Montgomery
+* AES & 3DES encryption and decryption
+* HMAC, CMAC, SHA-1, SHA-224/256/384/512 operations
+* HKDF, MIFARE® KDF, PRF (TLS-PSK)
+* Support of main TPM functionalities
+* Secured flash user memory up to 50kB
+
+By default when a part number with security is selected the SE050C2 version is installed on the module. This art number has support for all crypto algorithms available in the SE050 platform as described in [AN12436](https://www.nxp.com/docs/en/application-note/AN12436.pdf).
 
 # Connector description
 SDK software makes the pin configuration described in the table. Other configurations are possible just changing processor pin muxing.
@@ -189,11 +246,13 @@ SDK software makes the pin configuration described in the table. Other configura
 | 40  | RESERVED  |          |               |             |                                |
 
 # Electrical Specifications
-## Power consumption
+## Operating conditions
 
-|Input VCC | Typical current | Max current |
-|----------|-----------------|-------------|
-|3V3       | 230mA           | 2000mA      |
+|Parameter            |Min value | Typical value | Max value | Unit |
+|---------------------|----------|---------------|-----------|------|
+| Input VCC           | 3V3      | 3V3           | 3V3       | V    |
+| Current consumption |          | 230           | 2000      | mA   |
+| Temperature         | -40      |               | 85        | ºC   |
 
 ## Footprint
 TBD
@@ -215,7 +274,18 @@ The Module complies with the mechanical 2230 M.2 specifications.
 3D files available in the repository.
 
 ## Tested Connectors
-TBD
+
+### Key B M.2 conector
+
+| Part number | Manufacturer    | Link |
+|-------------|-----------------|------|
+| 2199230-3   | TE CONNECTIVITY | [link](https://www.te.com/usa-en/product-2199230-3.html)|
+
+### Expansion connector
+
+| Part number | Manufacturer    | Link |
+|-------------|-----------------|------|
+| DF40HC(2.5)-40DS-0.4V(58) | Hirose | [link](https://www.hirose.com/product/p/CL0684-4112-9-58)|
 
 # Ordering
 TBD
