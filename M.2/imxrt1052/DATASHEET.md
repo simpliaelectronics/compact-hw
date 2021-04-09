@@ -25,8 +25,7 @@ Table of Contents
 	* [Tested Connectors](#tested-connectors)
 		* [Key B M.2 conector](#key-b-m.2-conector)
 		* [Expansion connector](#expansion-connector)
-
-# Ordering
+  * [Ordering](#ordering)
 
 # Functional Description
 
@@ -303,7 +302,15 @@ The Module complies with the mechanical 2230 M.2 specifications.
 | DF40HC(2.5)-40DS-0.4V(58) | Hirose | [link](https://www.hirose.com/product/p/CL0684-4112-9-58)|
 
 # Ordering
-TBD
+The standard part number are shown in this table. Other configurations are available under demand.
 
-
-
+|     Código        |     Descripción                                                                           |
+|-------------------|-------------------------------------------------------------------------------------------|
+|     AA10520000    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash No security chip          |
+|     AA10520010    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash Security chip installed   |
+|     AA10520300    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash No security chip          |
+|     AA10520310    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash Security chip installed   |
+|     AA10523400    |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash No security chip          |
+|     AA10523410    |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash Security chip installed   |
+|     AA10524500    |     M.2 Compact module Processor i.MX RT 1052 16MB RAM 16MB Flash No security chip        |
+|     AA10525410    |     M.2 Compact module Processor i.MX RT 1052 16MB RAM 16MB Flash Security chip installed |
