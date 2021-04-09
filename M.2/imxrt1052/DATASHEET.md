@@ -34,7 +34,7 @@ Table of Contents
 
 IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16MB SDRAM and 16MB QSPI flash memory. It has a Plug and Trust device to provide a root of trust at IC level. Multiple interfaces such as LCD, USB, CSI, SD and RMII make this module suitable for different applications 
 
-![Connect imxrt1052](/imxrt1052/images/connect_imxrt1052.jpg)
+![Connect imxrt1052](/M.2/imxrt1052/images/connect_imxrt1052.jpg)
 
 ## Processor features
 
@@ -53,7 +53,7 @@ IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16
 * Extensive external memory interface options 
 	* NAND, eMMC, QuadSPI NOR Flash, and Parallel NOR Flash (not all available on the module)
 
-![imxrt1052 block diagram](/imxrt1052/images/iMX-RT1050-BD.jpg)
+![imxrt1052 block diagram](/M.2/imxrt1052/images/iMX-RT1050-BD.jpg)
 
 ## Module features
 
@@ -69,7 +69,7 @@ IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16
 
 ### Block Diagram
 
-![Connect imxrt1052 block diagram](/imxrt1052/images/block_diagram.jpg)
+![Connect imxrt1052 block diagram](/M.2/imxrt1052/images/block_diagram.jpg)
 
 ### Peripherals and GPIOs
 SDK software makes the pin configuration described in the table. Other configurations are possible just changing processor pin muxing.
@@ -277,7 +277,7 @@ TBD
 
 The Module complies with the mechanical 2230 M.2 specifications.
 
-![Module dimmensions](/imxrt1052/images/mod_size.jpg)
+![Module dimmensions](/M.2/imxrt1052/images/mod_size.jpg)
 
 | Dimmension | Value  |
 |------------|--------|
