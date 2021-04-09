@@ -33,7 +33,7 @@ Table of Contents
 
 IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16MB SDRAM and 16MB QSPI flash memory. It has a Plug and Trust device to provide a root of trust at IC level. Multiple interfaces such as LCD, USB, CSI, SD and RMII make this module suitable for different applications 
 
-![Connect imxrt1052](/M.2/imxrt1052/images/connect_imxrt1052.jpg)
+![Compact imxrt1052](/M.2/imxrt1052/images/compact_imxrt1052.jpg)
 
 ## Processor features
 
