@@ -1,6 +1,6 @@
 # COMPACT 1052 Module documentation pack
 
-![Connect imxrt1052](/M.2/imxrt1052/images/connect_imxrt1052.jpg)
+![Compact imxrt1052](/M.2/imxrt1052/images/compact_imxrt1052.jpg)
 
 This pack includes:
 
