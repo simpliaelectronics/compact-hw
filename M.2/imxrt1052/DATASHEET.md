@@ -9,7 +9,7 @@ Table of Contents
     * [Module features](#module-features)
     * [Interfaces](#interfaces)
        * [Block Diagram](#block-diagram)
-       * [Peripherals and GPIOs](#peripherals-and-gpioss)
+       * [Peripherals and GPIOs](#peripherals-and-gpios)
 	* [Security](#security)
 		* [Processor security](#processor-security)
 		* [Secure element](#secure-element)
@@ -23,7 +23,7 @@ Table of Contents
   * [Mechanical Specifications](#mechanical-specifications)
 	* [Dimensions and Weight](#dimensions-and-weight)
 	* [Tested Connectors](#tested-connectors)
-		* [Key B M.2 conector](#key-b-m.2-conector)
+		* [Key B M.2 connector](#key-b-m.2-connector)
 		* [Expansion connector](#expansion-connector)
   * [Ordering](#ordering)
 
@@ -269,7 +269,8 @@ SDK software makes the pin configuration described in the table. Other configura
 * (6) All parts are rated for industrial temperature range
 
 ## Footprint
-TBD
+
+![Module footprint](/M.2/imxrt1052/images/footprint.jpg)
 
 # Mechanical Specifications
 ## Dimensions and Weight
