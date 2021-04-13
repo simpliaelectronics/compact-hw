@@ -7,5 +7,6 @@ This pack includes:
 * [Datasheet](/M.2/imxrt1052/DATASHEET.md)
 * [Dimensional drawing](/M.2/imxrt1052/MOD_IMXRT_COMPACT_DIM.pdf)
 * [3D STEP file](/M.2/imxrt1052/MOD_IMXRT_COMPACT.step)
+* [Component footprint](/M.2/imxrt1052/Placement_Layout.pdf)
 
-All documents correspondo to HW revision 1.
+All documents correspond to HW revision 1.
