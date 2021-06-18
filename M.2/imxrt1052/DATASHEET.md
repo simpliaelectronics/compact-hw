@@ -31,7 +31,7 @@ Table of Contents
 
 ## Overview
 
-IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16MB SDRAM and 16MB QSPI flash memory. It has a Plug and Trust device to provide a root of trust at IC level. Multiple interfaces such as LCD, USB, CSI, SD and RMII make this module suitable for different applications 
+IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16MB SDRAM and 16MB QSPI flash memory. It has a Plug and Trust device to provide a root of trust at IC level. Multiple interfaces such as LCD, USB, CSI, SD and RMII make this module suitable for different applications
 
 ![Compact imxrt1052](/M.2/imxrt1052/images/compact_imxrt1052.jpg)
 
@@ -49,7 +49,7 @@ IMXRT Module is a M.2 2230 format board based in an IMXRT 1052 processor with 16
 	* Parallel camera sensor interface
 	* LCD display controller (up to WXGA 1366x768)
 	* 3x I2S for high-performance, multichannel audio
-* Extensive external memory interface options 
+* Extensive external memory interface options
 	* NAND, eMMC, QuadSPI NOR Flash, and Parallel NOR Flash (not all available on the module)
 
 ![imxrt1052 block diagram](/M.2/imxrt1052/images/iMX-RT1050-BD.jpg)
@@ -308,10 +308,10 @@ The standard part number are shown in this table. Other configurations are avail
 |     Código        |     Descripción                                                                           |
 |-------------------|-------------------------------------------------------------------------------------------|
 |     AA10520000    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash No security chip          |
-|     AA10520010    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash Security chip installed   |
 |     AA10520300    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash No security chip          |
-|     AA10520310    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash Security chip installed   |
 |     AA10523400    |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash No security chip          |
-|     AA10523410    |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash Security chip installed   |
 |     AA10524500    |     M.2 Compact module Processor i.MX RT 1052 16MB RAM 16MB Flash No security chip        |
+|     AA10520010    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash Security chip installed   |
+|     AA10520310    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash Security chip installed   |
+|     AA10523410    |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash Security chip installed   |
 |     AA10525410    |     M.2 Compact module Processor i.MX RT 1052 16MB RAM 16MB Flash Security chip installed |
