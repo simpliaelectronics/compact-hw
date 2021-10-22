@@ -305,13 +305,13 @@ The Module complies with the mechanical 2230 M.2 specifications.
 # Ordering
 The standard part number are shown in this table. Other configurations are available under demand.
 
-|     Código        |     Descripción                                                                           |
-|-------------------|-------------------------------------------------------------------------------------------|
-|     AAB0000    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash No security chip          |
-|     AAB0300    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash No security chip          |
-|     AAB3400    |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash No security chip          |
-|     AAB4500    |     M.2 Compact module Processor i.MX RT 1052 16MB RAM 16MB Flash No security chip        |
-|     AAB0010    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash Security chip installed   |
-|     AAB0310    |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash Security chip installed   |
-|     AAB3410    |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash Security chip installed   |
-|     AAB5410    |     M.2 Compact module Processor i.MX RT 1052 16MB RAM 16MB Flash Security chip installed |
+|     Código    |     Descripción                                                                           |
+|---------------|-------------------------------------------------------------------------------------------|
+|     AAB0000   |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash No security chip          |
+|     AAB0300   |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash No security chip          |
+|     AAB3400   |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash No security chip          |
+|     AAB4500   |     M.2 Compact module Processor i.MX RT 1052 16MB RAM 16MB Flash No security chip        |
+|     AAB0010   |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 0MB Flash Security chip installed   |
+|     AAB0310   |     M.2 Compact module Processor i.MX RT 1052 0MB RAM 4MB Flash Security chip installed   |
+|     AAB3410   |     M.2 Compact module Processor i.MX RT 1052 8MB RAM 8MB Flash Security chip installed   |
+|     AAB5410   |     M.2 Compact module Processor i.MX RT 1052 16MB RAM 16MB Flash Security chip installed |
