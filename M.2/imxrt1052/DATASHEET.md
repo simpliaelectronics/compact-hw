@@ -25,7 +25,7 @@ Table of Contents
 	* [Tested Connectors](#tested-connectors)
 		* [Key B M.2 connector](#key-b-m.2-connector)
 		* [Expansion connector](#expansion-connector)
-  * [Ordering](#ordering)
+  * [Ordering](#ordering) 
 
 # Functional Description
 
